@@ -79,7 +79,7 @@ withdraw.withdrawNotify({
 });
 
 //7. 提币取消
-withdraw.withdrawCancel({"symbol": "VLX", "trans_id": 49560}).then(function (data) {
+withdraw.withdrawCancel({"symbol": "VLX", "trans_id": 49560,"msg":"tesst"}).then(function (data) {
     console.debug("提币取消结果：------" + JSON.stringify(data));
 });
 
