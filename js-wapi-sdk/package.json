@@ -1,0 +1,28 @@
+{
+  "name": "js-wapi-sdk",
+  "version": "1.0.0",
+  "description": "node sdk tool for calling wapi service",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HiCoinCom/js-wapi-sdk.git"
+  },
+  "keywords": [
+    "waas",
+    "wapi"
+  ],
+  "author": "zhangpeizheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HiCoinCom/js-wapi-sdk/issues"
+  },
+  "homepage": "https://github.com/HiCoinCom/js-wapi-sdk#readme",
+  "dependencies": {
+    "node-rsa": "^1.1.1",
+    "request": "^2.88.2",
+    "urlsafe-base64": "^1.0.0"
+  }
+}
