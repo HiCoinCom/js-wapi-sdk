@@ -3,7 +3,7 @@ const WApiHttpUtils = require('../utils/WASSHttpUtils');
 const Cons = require('../utils/Constants');
 
 /**
- * 向平台注册地址，此地址用于分配给用户
+ * Register an address with the platform, this address is used to assign to users
  */
 exports.registerAddress = async function (reqData) {
     return await WApiHttpUtils.request({
@@ -14,7 +14,7 @@ exports.registerAddress = async function (reqData) {
 };
 
 /**
- * 推送的地址中还有多少可用地址
+ * How many addresses are still available in the pushed addresses
  */
 exports.checkAvailableAddress = async function (reqData) {
     var respData = await WApiHttpUtils.request({

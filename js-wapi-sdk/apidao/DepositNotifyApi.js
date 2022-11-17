@@ -1,12 +1,12 @@
 /**
- *  充值通知相关api
+ *  deposit notification result returned
  */
 const RSA = require("../utils/RSAUtil");
 const WApiHttpUtils = require('../utils/WASSHttpUtils');
 const Cons = require('../utils/Constants');
 
 /**
- *  充值通知
+ *  deposit notification
  */
 exports.depositNotify =async function (reqData) {
     var respData = await WApiHttpUtils.request({
@@ -18,7 +18,7 @@ exports.depositNotify =async function (reqData) {
 };
 
 /**
- *  内部通知
+ *  internal notification
  */
 exports.internalNotify = async function (reqData) {
     return await WApiHttpUtils.request({

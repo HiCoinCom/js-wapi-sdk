@@ -3,7 +3,7 @@ const WApiHttpUtils = require('../utils/WASSHttpUtils');
 const Cons = require('../utils/Constants');
 
 /**
- * 提币拉取接口
+ * Withdrawal interface
  */
 exports.withdrawConsume = async function (reqData) {
     var respData = await WApiHttpUtils.request({
@@ -15,7 +15,7 @@ exports.withdrawConsume = async function (reqData) {
 };
 
 /**
- * 提币通知接口
+ * Withdrawal notification interface
  */
 exports.withdrawNotify = async function (reqData) {
     return await WApiHttpUtils.request({
@@ -26,7 +26,7 @@ exports.withdrawNotify = async function (reqData) {
 };
 
 /**
- * 提币打回接口
+ * Withdrawal and return interface
  */
 exports.withdrawCancel = async function (reqData) {
     return await WApiHttpUtils.request({

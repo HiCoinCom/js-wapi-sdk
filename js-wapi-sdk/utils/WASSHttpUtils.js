@@ -28,7 +28,7 @@ exports.request = async function (data) {
         },
         json: true
     };
-    // 获取post请求数据
+    // Get post request data
 
     return await new Promise(function (resolve, reject) {
         request(options, function (error, response, body) {

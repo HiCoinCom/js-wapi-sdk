@@ -1,13 +1,13 @@
 # js-wapi sdk
 wapi api client sdk
 
-依赖包安装：
+Dependency package installation：
 
 ```
 npm install js-wapi-sdk@1.0.0
 ```
 
-使用方式:
+How to use:
 
 ```
 const Cons = require('js-wapi-sdk/utils/Constants');
@@ -16,22 +16,22 @@ const depositNotify = require('js-wapi-sdk/apidao/DepositNotifyApi');
 const withdraw = require('js-wapi-sdk/apidao/WithdrawApi');
 
 
-Cons.setAppId('baaceb1e506e1b5d7d1f0a3b1622583b');//应用id
-Cons.setHost('http://awstestopenapi.hiwallet.pro');//接口域名
-Cons.setPubKey('wass 公钥');
-Cons.setPrivateKey('商户私钥');
+Cons.setAppId('baaceb1e506e1b5d7d1f0a3b1622583b');//app id
+Cons.setHost('http://awstestopenapi.hiwallet.pro');//interface domain name
+Cons.setPubKey('wass public key');
+Cons.setPrivateKey('Merchant private key');
 
-//1.注册地址
+//1.registered address
 addrApi.registerAddress({symbol: 'VLX', addresses: 'aaaaabbbbb',memo:false}).then(function (data) {
-    console.debug("注册地址结果：-----" + JSON.stringify(data));
+    console.debug("Registered address results：-----" + JSON.stringify(data));
 });
 
-//2.获取地址可用数
+//2.obtain the number of available address
 addrApi.checkAvailableAddress({symbol: 'VLX'}).then(function (data) {
-    console.debug("获取地址可用数：------" + JSON.stringify(data));
+    console.debug("obtain the number of available address：------" + JSON.stringify(data));
 });
 
-//3.充值接口
+//3.deposit notification interface
 depositNotify.depositNotify({
         "address_to": "LZC5G3rWkzsDDRRJnMD9mfdefe2ncEFnNH",
         "amount": 123,
@@ -43,10 +43,10 @@ depositNotify.depositNotify({
         "txid": "adb936e24130c3fffer294d607a865f467a906b96850e02c1a2771c759f0bfdsf"
     }
 ).then(function (data) {
-    console.debug("充值结果：------" + JSON.stringify(data));
+    console.debug("notification result：------" + JSON.stringify(data));
 });
 
-//4.内部通知接口
+//4.internal notification
 depositNotify.internalNotify({
     "address_to": "aaaaabbbbb",
     "amount": 234234,
@@ -56,15 +56,15 @@ depositNotify.internalNotify({
     "symbol": "VLX",
     "txid": "adb936e24130c3fff9a6294d607a865f467a906b96850e02c1a2771c759ewwe"
 }).then(function (data) {
-    console.debug("内部通知结果：------" + JSON.stringify(data));
+    console.debug("internal notification result：------" + JSON.stringify(data));
 });
 
-//5.获取提币列表
+//5.Get the withdrawal list
 withdraw.withdrawConsume({symbol: "VLX"}).then(function (data) {
-    console.debug("获取提币列表结果：------" + JSON.stringify(data));
+    console.debug("obtain the result of the withdrawal list：------" + JSON.stringify(data));
 });
 
-//6.提现通知接口
+//6.Withdrawal notification interface
 withdraw.withdrawNotify({
     "address_to": "L111ZC5G3rWkzsDDRRJnMD9mfdefe2ncEF",
     "amount": 234234.234,
@@ -75,12 +75,12 @@ withdraw.withdrawNotify({
     "trans_id": 50021,
     "txid": "adb936e243fa6294d607a865f467a906b96850e02c1a2771c759ewrweD"
 }).then(function (data) {
-    console.debug("提现通知接口结果：------" + JSON.stringify(data));
+    console.debug("Withdrawal notification interface result：------" + JSON.stringify(data));
 });
 
-//7. 提币取消
+//7. Withdrawal Cancellation
 withdraw.withdrawCancel({"symbol": "VLX", "trans_id": 49560,"msg":"tesst"}).then(function (data) {
-    console.debug("提币取消结果：------" + JSON.stringify(data));
+    console.debug("Withdrawal Cancellation Result：------" + JSON.stringify(data));
 });
 
 ```
